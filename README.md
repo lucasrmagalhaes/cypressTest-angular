@@ -73,11 +73,11 @@
   Instalação
 </h3>
 
-<p align="left">
+<p align="justify">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abra outro terminal. Na pasta/angular-realworld-example-app/ execute:
   <pre>npm install cypress --save-dev</pre>
   <pre>npx cypress -v</pre>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso tenha problemas com Proxy ou Firewall, baixe o binário em https://download.cypress.io/desktop e configure a variável de ambiente antes de instalar:<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso tenha problemas com Proxy ou Firewall, baixe o binário em https://download.cypress.io/desktop e configure a variável de ambiente antes de instalar:
   <pre>set CYPRESS_INSTALL_BINARY=C:\cypress.zip</pre>
   <pre>npm install cypress --save-dev --verbose</pre>
 </p>
