@@ -67,6 +67,8 @@ http://localhost:4200/</pre><br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vamos adicionar o Cypress!
 </p>
 
+<hr>
+
 <h3 align="center"> 
   Instalação
 </h3>
@@ -80,6 +82,8 @@ http://localhost:4200/</pre><br>
   <pre>set CYPRESS_INSTALL_BINARY=C:\cypress.zip</pre>
   <pre>npm install cypress --save-dev --verbose</pre>
 </p>
+
+<hr>
 
 <h3 align="center"> 
   Removendo o Protactor
