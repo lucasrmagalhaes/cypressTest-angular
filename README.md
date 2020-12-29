@@ -30,6 +30,16 @@
 
 <hr>
 
+<h3 align="center">Motivação</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agilidade (- tempo)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qualidade (- bugs)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Economia de horas (- custo)
+</p>
+
+<hr>
+
 <h3 align="center">Por que não somente Testes Unitários?</h3>
 
 <p align="left">
