@@ -339,3 +339,63 @@ describe('Paginação', () => {
     })
 })
 </pre>
+
+<hr>
+
+<h3 align="center">Post</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/post.spec.js</p>
+
+<pre>
+describe('Post', () => {
+
+    beforeEach(() => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+    })
+
+    it('Novo', () => {
+        const tit = 'Cypress E2E'
+        cy.contains('New Article').click()
+        cy.location('pathname').should('equal', '/editor')
+        cy.get('[formcontrolname=title]').type(tit)
+        cy.get('[formcontrolname=description]').type('Ponta a Ponta')
+        cy.get('[formcontrolname=body]').type('Agilidade, Qualidade')
+        cy.contains('Publish Article').click()
+        cy.get('h1').contains(tit)
+    })
+
+    it('Editar', () => {
+        cy.contains('testecypress').click()
+        cy.location('pathname').should('contains', '/profile')
+        cy.get('.article-preview').get('h1').first().click()
+        cy.contains('Edit Article').click()
+        cy.get('[formcontrolname=body]').clear()
+        cy.get('[formcontrolname=body]').type('Economia')
+        cy.contains('Publish Article').click()
+        cy.contains('Economia')
+    })
+
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Tags</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/tags.spec.js</p>
+
+<pre>
+describe('Tags', () => {
+    it('Adicionar', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.contains('testecypress').click()
+        cy.location('pathname').should('contains', '/profile')
+        cy.get('.article-preview').get('h1').first().click()
+        cy.contains('Edit Article').click()
+        cy.get('[placeholder="Enter tags"]').type('dungeons{enter}');
+        cy.get('[placeholder="Enter tags"]').type('dragons{enter}');
+        cy.contains('Publish Article').click();
+        cy.get('.tag-list').contains('dragons');
+    })
+})
+</pre>
