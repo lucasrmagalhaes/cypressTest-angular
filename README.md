@@ -7,6 +7,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;Teste unitário valida a qualidade do Código. E2E valida a aplicação.
 </p>
 
+<hr>
+
 <h3 align="center"> 
   Cypress?
 </h3>
@@ -33,6 +35,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;Você não pode usar o Cypress para controlar dois navegadores no mesmo teste.
 </p>
 
+<hr>
+
 <h3 align="center"> 
   Pré-Requisitos
 </h3>
@@ -41,6 +45,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;Git<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Node
 </p>
+
+<hr>
 
 <h3 align="center"> 
   O que vamos testar
