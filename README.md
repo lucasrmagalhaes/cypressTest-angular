@@ -56,10 +56,37 @@
   O que vamos testar
 </h3>
 
-<p>
+<p align="justify">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projeto para teste: Angular Real World Example App
   <pre>git clone https://github.com/gothinkster/angular-realworld-example-app</pre>
   <pre>cd angular-realworld-example-app</pre>
   <pre>npm install</pre>
-  <pre>npm run start</pre>
+  <pre>npm run start</pre><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://localhost:4200/<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um aplicativo Angular contendo exemplos "reais" (CRUD, autenticação, etc) de acordo com a especificação para exemplos RealWord.<br>
+  Vamos adicionar o Cypress!
+</p>
+
+<h3 align="center"> 
+  Instalação
+</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abra outro terminal. Na pasta/angular-realworld-example-app/ execute:<br>
+  <pre>npm install cypress --save-dev</pre><br>
+  <pre>npx cypress -v</pre><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso tenha problemas com Proxy ou Firewall, baixe o binário em https://download.cypress.io/desktop e configure a variável de ambiente antes de instalar:<br>
+  <pre>set CYPRESS_INSTALL_BINARY=C:\cypress.zip</pre><br>
+  <pre>npm install cypress --save-dev --verbose</pre>
+</p>
+
+<h3 align="center"> 
+  Removendo o Protactor
+</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remova o pacote:<br>
+  <pre>npm uninstall protactor --save-dev</pre><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclua a pasta /e2e/<br>
+  Do package.json, remova a linha: "e2e": "ng e2e"
 </p>
