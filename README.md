@@ -54,4 +54,8 @@
 
 <p>
   &nbsp;&nbsp;&nbsp;&nbsp;Projeto para teste: Angular Real World Example App
+  <pre>git clone https://github.com/gothinkster/angular-realworld-example-app</pre>
+  <pre>cd angular-realworld-example-app</pre>
+  <pre>npm install</pre>
+  <pre>npm run start</pre>
 </p>
