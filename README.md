@@ -342,7 +342,7 @@ describe('Paginação', () => {
 
 <hr>
 
-<h3 align="center">Pagination</h3>
+<h3 align="center">Post</h3>
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/post.spec.js</p>
 
