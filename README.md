@@ -2,9 +2,45 @@
   Testes E2E com Cypress
 </h1>
 
-<h3 align="center"> 
-  Por que não somente Testes Unitários?
-</h3>
+<h3 align="center">Programação</h3>
+
+<ul>
+  <li>Motivação</li>
+  <li>Cypress?</li>
+  <li>Trade-offs</li>
+  <li>Pré-Requisitos</li>
+  <li>O que vamos testar</li>
+  <li>Instalação</li>
+  <li>Removendo o Protactor</li>
+  <li>Cypress Test Runner</li>
+  <li>Primeiro Teste</li>
+  <li>Como Rodar</li>
+  <li>Configuração</li>
+  <li>Roteiro de Testes</li>
+  <li>Support Commands</li>
+  <li>Fixture</li>
+  <li>Relatórios e Integrações</li>
+  <li>Plugins</li>
+  <li>Incluir Outra Spec</li>
+  <li>Falso Negativo</li>
+  <li>DevOps</li>
+  <li>Paralelismo</li>
+  <li>Analytics Dashboard</li>
+</ul>
+
+<hr>
+
+<h3 align="center">Motivação</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agilidade (- tempo)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qualidade (- bugs)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Economia de horas (- custo)
+</p>
+
+<hr>
+
+<h3 align="center">Por que não somente Testes Unitários?</h3>
 
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O teste E2E simula a navegação pelo usuário, validando não só a interface frontend como integração com o backend.<br>
@@ -181,8 +217,7 @@ http://localhost:4200/</pre><br>
 <h3 align="center">Cypress Recorder</h3>
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Google Chrome - Cypress Recorder</a><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extensão para o Chrome capaz de gravar um roteiro base.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Extensão</a> para o Chrome capaz de gravar um roteiro base.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomendado para capturar os seletores no DOM.
   
   <pre>
@@ -204,3 +239,44 @@ describe('Conduit Cadastro', () => {
   
   <pre>npx cypress run --spec "cypress/integration/examples/register.spec.js"</pre>
 </p>
+
+<hr>
+
+<h3 align="center">Support Comands</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/support/index.js
+<pre>
+Cypress.Commands.add('login', (username, password) => {
+  cy.visit('/login')
+  cy.url().should('include', '/login')
+  cy.get('[formcontrolname=email]').type(username)
+  cy.get('[formcontrolname=password]').type(password)
+  cy.get('.btn').click()
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Login</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/login.spec.js
+</p>
+
+<pre>
+describe('Conduit Login', () => {
+    it('Login sucesso', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.get('.nav-item:nth-child(4) > nav-link').click()
+        cy.get('.btn:nth-child(5)').click()
+        cy.url().should('contain', '/settings')
+    })
+
+    it('Dados Inválidos', () => {
+        cy.login('usuario@inexistente.com', 'senhaerrada')
+        cy.get('.error-messages > li')
+            .should('contain', 'email or password is invalid')
+    })
+})
+</pre>
