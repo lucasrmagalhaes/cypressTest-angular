@@ -219,8 +219,8 @@ http://localhost:4200/</pre><br>
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Extensão</a> para o Chrome capaz de gravar um roteiro base.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomendado para capturar os seletores no DOM.
-  
-  <pre>
+
+<pre>
 describe('Conduit Cadastro', () => {
     const usuario = 'usuario' + (new Date()).getTime()
     const senha = 'senha' + (new Date()).getTime()
@@ -237,7 +237,7 @@ describe('Conduit Cadastro', () => {
 })
 </pre>
   
-  <pre>npx cypress run --spec "cypress/integration/examples/register.spec.js"</pre>
+  <pre>npx cypress run --spec "cypress/integration/register.spec.js"</pre>
 </p>
 
 <hr>
@@ -261,7 +261,7 @@ Cypress.Commands.add('login', (username, password) => {
 <h3 align="center">Login</h3>
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/login.spec.js
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/login.spec.js
 </p>
 
 <pre>
@@ -277,6 +277,84 @@ describe('Conduit Login', () => {
         cy.login('usuario@inexistente.com', 'senhaerrada')
         cy.get('.error-messages > li')
             .should('contain', 'email or password is invalid')
+    })
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Perfil</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/perfil.spec.js</p>
+
+<pre>
+describe('Profile', () => {
+    it('Editar Perfil', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.contains('testecypress').click()
+        cy.contains('Edit Profile Settings').click()
+        cy.get('[formcontrolname="image"]').clear()
+        cy.get('[formcontrolname="image"]')
+            .type('https://thispersondoesnotexist.com/image')
+        cy.get('[formcontrolname="password"]').type('testecypress')
+        cy.contains('Update Settings').click()
+    })
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Feeds</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/feed.spec.js</p>
+
+<pre>
+describe('Conduit Feed', () => {
+
+    it('Ver Feeds', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.get('.nav-pills > .nav-item:nth-child(1) > .nav-link').click();
+        cy.get('.nav-pills > .nav-item:nth-child(2) > .nav-link').click()
+        cy.get('app-article-preview:nth-child(1) .btn').click()
+    })
+    
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Feeds</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/feed.spec.js</p>
+
+<pre>
+describe('Conduit Feed', () => {
+
+    it('Ver Feeds', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.get('.nav-pills > .nav-item:nth-child(1) > .nav-link').click();
+        cy.get('.nav-pills > .nav-item:nth-child(2) > .nav-link').click()
+        cy.get('app-article-preview:nth-child(1) .btn').click()
+    })
+    
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Pagination</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/pagination.spec.js</p>
+
+<pre>
+describe('Paginação', () => {
+    it('Paginar', () => {
+        cy.visit('/')
+        cy.get('.page-item.active > a').contains('1')
+        cy.get('.page-item:nth-child(2) > .page-link').click()
+        cy.get('.page-item.active > a').contains('2')
+        cy.get('.page-item:nth-child(3) > .page-link').click()
+        cy.get('.page-item.active > a').contains('3')
     })
 })
 </pre>
