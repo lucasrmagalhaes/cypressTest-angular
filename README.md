@@ -262,6 +262,8 @@ Cypress.Commands.add('login', (username, password) => {
 
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/login.spec.js
+</p>
+
 <pre>
 describe('Conduit Login', () => {
     it('Login sucesso', () => {
@@ -278,4 +280,3 @@ describe('Conduit Login', () => {
     })
 })
 </pre>
-</p>
