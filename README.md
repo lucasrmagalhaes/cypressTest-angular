@@ -61,10 +61,12 @@
   <pre>git clone https://github.com/gothinkster/angular-realworld-example-app</pre>
   <pre>cd angular-realworld-example-app</pre>
   <pre>npm install</pre>
-  <pre>npm run start</pre><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://localhost:4200/<br>
+  <pre>
+  npm run start
+  http://localhost:4200/
+  </pre><br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqui temos um aplicativo Angular contendo exemplos "reais" (CRUD, autenticação, etc) de acordo com a especificação para exemplos RealWord.<br>
-  Vamos adicionar o Cypress!
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vamos adicionar o Cypress!
 </p>
 
 <h3 align="center"> 
