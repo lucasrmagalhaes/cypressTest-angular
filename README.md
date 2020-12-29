@@ -200,7 +200,7 @@ describe('Conduit Cadastro', () => {
             .should('be.visible')
     })
 })
-  </pre>
+</pre>
   
   <pre>npx cypress run --spec "cypress/integration/examples/register.spec.js"</pre>
 </p>
