@@ -1,15 +1,15 @@
-<h2 align="center"> 
+<h3 align="center"> 
   Por que não somente Testes Unitários?
-</h2>
+</h3>
 
 <p align="justify">
   &nbsp;&nbsp;&nbsp;&nbsp;O teste E2E simula a navegação pelo usuário, validando não só a interface frontend como integração com o backend.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Teste unitário valida a qualidade do Código. E2E valida a aplicação.
 </p>
 
-<h2 align="center"> 
+<h3 align="center"> 
   Cypress?
-</h2>
+</h3>
 
 <p align="justify">
   &nbsp;&nbsp;&nbsp;&nbsp;JavaScritpt: Baixa curva de aprendizado, custo com treinamento reduzido.<br>
@@ -33,18 +33,18 @@
   &nbsp;&nbsp;&nbsp;&nbsp;Você não pode usar o Cypress para controlar dois navegadores no mesmo teste.
 </p>
 
-<h2 align="center"> 
+<h3 align="center"> 
   Pré-Requisitos
-</h2>
+</h3>
 
 <p>
   &nbsp;&nbsp;&nbsp;&nbsp;Git<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Node
 </p>
 
-<h2 align="center"> 
+<h3 align="center"> 
   O que vamos testar
-</h2>
+</h3>
 
 <p>
   &nbsp;&nbsp;&nbsp;&nbsp;Projeto para teste: Angular Real World Example App
