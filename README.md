@@ -77,8 +77,8 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Abra outro terminal. Na pasta/angular-realworld-example-app/ execute:<br>
   <pre>npm install cypress --save-dev</pre><br>
   <pre>npx cypress -v</pre><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso tenha problemas com Proxy ou Firewall, baixe o binário em https://download.cypress.io/desktop e configure a variável de ambiente antes de instalar:<br>
-  <pre>set CYPRESS_INSTALL_BINARY=C:\cypress.zip</pre><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso tenha problemas com Proxy ou Firewall, baixe o binário em https://download.cypress.io/desktop e configure a variável de ambiente antes de instalar:
+  <pre>set CYPRESS_INSTALL_BINARY=C:\cypress.zip</pre>
   <pre>npm install cypress --save-dev --verbose</pre>
 </p>
 
@@ -87,8 +87,8 @@
 </h3>
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remova o pacote:<br>
-  <pre>npm uninstall protactor --save-dev</pre><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remova o pacote:
+  <pre>npm uninstall protactor --save-dev</pre>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclua a pasta /e2e/<br>
-  Do package.json, remova a linha: "e2e": "ng e2e"
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do package.json, remova a linha: "e2e": "ng e2e"
 </p>
