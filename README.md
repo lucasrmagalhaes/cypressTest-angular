@@ -239,3 +239,42 @@ describe('Conduit Cadastro', () => {
   
   <pre>npx cypress run --spec "cypress/integration/examples/register.spec.js"</pre>
 </p>
+
+<hr>
+
+<h3 align="center">Support Comands</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/support/index.js
+<pre>
+Cypress.Commands.add('login', (username, password) => {
+  cy.visit('/login')
+  cy.url().should('include', '/login')
+  cy.get('[formcontrolname=email]').type(username)
+  cy.get('[formcontrolname=password]').type(password)
+  cy.get('.btn').click()
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Login</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/login.spec.js
+<pre>
+describe('Conduit Login', () => {
+    it('Login sucesso', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.get('.nav-item:nth-child(4) > nav-link').click()
+        cy.get('.btn:nth-child(5)').click()
+        cy.url().should('contain', '/settings')
+    })
+
+    it('Dados Inválidos', () => {
+        cy.login('usuario@inexistente.com', 'senhaerrada')
+        cy.get('.error-messages > li')
+            .should('contain', 'email or password is invalid')
+    })
+})
+</pre>
