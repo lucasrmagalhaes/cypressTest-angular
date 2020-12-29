@@ -2,8 +2,6 @@
   Testes E2E com Cypress
 </h1>
 
-<br>
-
 <h3 align="center"> 
   Por que não somente Testes Unitários?
 </h3>
