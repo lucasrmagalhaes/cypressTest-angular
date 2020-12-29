@@ -323,25 +323,6 @@ describe('Conduit Feed', () => {
 
 <hr>
 
-<h3 align="center">Feeds</h3>
-
-<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/feed.spec.js</p>
-
-<pre>
-describe('Conduit Feed', () => {
-
-    it('Ver Feeds', () => {
-        cy.login('testecypress@testecypress.com', 'testecypress')
-        cy.get('.nav-pills > .nav-item:nth-child(1) > .nav-link').click();
-        cy.get('.nav-pills > .nav-item:nth-child(2) > .nav-link').click()
-        cy.get('app-article-preview:nth-child(1) .btn').click()
-    })
-    
-})
-</pre>
-
-<hr>
-
 <h3 align="center">Pagination</h3>
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/pagination.spec.js</p>
