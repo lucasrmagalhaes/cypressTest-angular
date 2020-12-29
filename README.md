@@ -181,8 +181,7 @@ http://localhost:4200/</pre><br>
 <h3 align="center">Cypress Recorder</h3>
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Google Chrome - Cypress Recorder</a><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extensão para o Chrome capaz de gravar um roteiro base.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Extensão</a> para o Chrome capaz de gravar um roteiro base.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomendado para capturar os seletores no DOM.
   
   <pre>
