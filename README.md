@@ -2,9 +2,35 @@
   Testes E2E com Cypress
 </h1>
 
-<h3 align="center"> 
-  Por que não somente Testes Unitários?
-</h3>
+<h3 align="center">Programação</h3>
+
+<ul>
+  <li>Motivação</li>
+  <li>Cypress?</li>
+  <li>Trade-offs</li>
+  <li>Pré-Requisitos</li>
+  <li>O que vamos testar</li>
+  <li>Instalação</li>
+  <li>Removendo o Protactor</li>
+  <li>Cypress Test Runner</li>
+  <li>Primeiro Teste</li>
+  <li>Como Rodar</li>
+  <li>Configuração</li>
+  <li>Roteiro de Testes</li>
+  <li>Support Commands</li>
+  <li>Fixture</li>
+  <li>Relatórios e Integrações</li>
+  <li>Plugins</li>
+  <li>Incluir Outra Spec</li>
+  <li>Falso Negativo</li>
+  <li>DevOps</li>
+  <li>Paralelismo</li>
+  <li>Analytics Dashboard</li>
+</ul>
+
+<hr>
+
+<h3 align="center">Por que não somente Testes Unitários?</h3>
 
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O teste E2E simula a navegação pelo usuário, validando não só a interface frontend como integração com o backend.<br>
