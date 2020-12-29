@@ -95,3 +95,33 @@ http://localhost:4200/</pre><br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclua a pasta /e2e/<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do package.json, remova a linha: "e2e": "ng e2e"
 </p>
+
+<hr>
+
+<h3 align="center"> 
+  Cypress Test Runner
+</h3>
+
+<p align="left">
+    <pre>npx cypress open</pre>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O comando "cypress open", além de abrir o Cypress Test Runner, cria a pasta inicial /cypress/ e o arquivo de configuração /cypress.json<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E já vem com /examples/ dos principais comandos Cypress.
+</p>
+
+<hr>
+
+<h3 align="center"> 
+  Primeiro Teste
+</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/exemplo.spec.js
+  <pre>describe('Primeiro Teste', () => {
+  it('Exemplos Cypress', () => {
+    cy.visit('https://example.cypress.io')
+    expect(true).to.equal(true)
+  })
+})</pre>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;describe and it come from Mocha<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expect comes from Chai
+</p>
