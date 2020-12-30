@@ -538,7 +538,7 @@ Cypress.Commands.add('loadUsers', () => {
 
 <p align="left>Verifique se os as apis e serviços estão rodando:</p>
           
-<pre>
+```
 it('Backend Health Checks', () => {
   
   cy.request('https://login/healthcheck').then((response) => {
@@ -551,7 +551,7 @@ it('Backend Health Checks', () => {
   })  
 
 })
-</pre>
+```
 
 <hr>
 
