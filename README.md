@@ -399,3 +399,155 @@ describe('Tags', () => {
     })
 })
 </pre>
+
+<hr>
+
+<h3 align="center">Comentários</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/comentarios.spec.js</p>
+
+<pre>
+describe('Comentarios', () => {
+    it('Escrever', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.contains('Global Feed').click()
+        cy.get('.preview-link').first().click()
+        cy.get('.form-control').type('Sensacional!')
+        cy.get('.btn-primary').click()
+        cy.contains('Sensacional!')
+    })
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Seguir</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/seguir.spec.js</p>
+
+<pre>
+describe('Seguir', () => {
+    it('Seguir Usuário', () => {
+        const usuario = 'usuario'+(new Date()).getTime();
+        const senha = 'senha'+(new Date()).getTime();
+        cy.visit('/register', { timeout: 10000 })
+        cy.get('[formcontrolname=username]').type(usuario)
+        cy.get('[formcontrolname=email]').type(usuario+'@email.com')
+        cy.get('[formcontrolname=password]').type(senha)
+        cy.get('.btn').click()
+        cy.wait(10000)
+        cy.visit('/profile/testecypress')
+        cy.contains('Folow').click()
+    })
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Logout</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/logout.spec.js</p>
+
+<pre>
+describe('Logout', () => {
+    it('Logout via Perfil', () => {
+        cy.login('testecypress@testecypress.com', 'testecypress')
+        cy.contains('Settings').click()
+        cy.url().should('include', '/settings')
+        cy.get('.btn-outline-danger').click()
+    })
+})
+</pre>
+
+<hr>
+
+<h3 align="center">Fixture: Data-Driven Tests</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/support/index.js</p>
+
+<pre>
+Cypress.Commands.add('loadUsers', () => {
+  cy.fixture('users')
+    .as('users')
+})
+</pre>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/test.spec.js</p>
+
+<pre>
+// this.users.default.username
+// this.users.default.pass
+// this.users.client.username
+// this.users.client.pass
+</pre>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/fixtures/users.json</p>
+
+<pre>
+{
+  "default":{
+    "user": "basic-user",
+    "pass": "testpass"
+  },
+  "client":{
+    "user": "premium-user",
+    "pass": "testpass"
+  }
+}
+</pre>
+
+<hr>
+
+<a href="https://docs.cypress.io/plugins/">Plugins</a><br>
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funcionalidades extendidas</p>
+
+<hr>
+
+<h3 align="center">Relatórios e Integrações</h3>
+
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reports json, html e xml</p>
+
+<ul>
+  <li>mocha</li>
+  <li>mochawesome</li>
+  <li>mochawesome-merge</li>
+  <li>mochawesome-report-generator</li>
+  <li>cypress-multi-reporters</li>
+  <li>cypress-slack-reporter</li>
+  <li>cypress-sonarqube-reporter</li>
+</ul>
+
+<hr>
+
+<h3 align="center">Falso Negativo</h3>
+
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rede, microserviços e dependências podem falhar</p><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Um teste E2E pode falhar por conta de outros recursos além do controle da sua aplicação:
+</p>
+
+<ul>
+  <li>Uma API pode falhar</li>
+  <li>Insdisponibilidade de Rede ou Firewall</li>
+  <li>Indisponibilidade de recursos como CPU e memória</li>
+  <li>Deploys paralelos</li>
+</ul>
+
+<h3 align="center">Como identificar?</h3>
+
+<p align="left>Verifique se os as apis e serviços estão rodando:</p>
+          
+<pre>
+it('Backend Health Checks', () => {
+  
+  cy.request('https://login/healthcheck').then((response) => {
+    expect(response.status).to.eq(200)
+  })
+  
+  cy.request('https://database/healtcheck')
+    .then((response) => {
+    expect(response.status).to.eq(200)
+  })
+  
+})
+</pre>
