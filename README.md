@@ -498,8 +498,9 @@ Cypress.Commands.add('loadUsers', () => {
 
 <hr>
 
-<a href="https://docs.cypress.io/plugins/">Plugins</a><br>
-<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funcionalidades extendidas</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.cypress.io/plugins/">Plugins</a><br>
+<p align="left">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Funcionalidades extendidas</p>
 
 <hr>
 
@@ -522,7 +523,7 @@ Cypress.Commands.add('loadUsers', () => {
 <h3 align="center">Falso Negativo</h3>
 
 <p align="left">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rede, microserviços e dependências podem falhar</p><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rede, microserviços e dependências podem falhar<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Um teste E2E pode falhar por conta de outros recursos além do controle da sua aplicação:
 </p>
 
@@ -537,7 +538,7 @@ Cypress.Commands.add('loadUsers', () => {
 
 <p align="left>Verifique se os as apis e serviços estão rodando:</p>
           
-<pre>
+`
 it('Backend Health Checks', () => {
   
   cy.request('https://login/healthcheck').then((response) => {
@@ -550,4 +551,4 @@ it('Backend Health Checks', () => {
   })
   
 })
-</pre>
+`
