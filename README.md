@@ -605,7 +605,7 @@ docker run cypress:0.0.1
 
 <h3 align="center">+ exemplos</h3>
 
-<p align="left>1 - Cypress Kitchen Sink</p>
+<p align="left">1 - Cypress Kitchen Sink</p>
           
 <pre>
 git clone
