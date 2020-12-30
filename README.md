@@ -550,3 +550,47 @@ it('Backend Health Checks', () => {<br><br>
 &nbsp;&nbsp;})<br>
 <br>  
 })
+
+<hr>
+
+<h3 align="center">DevOps</h3>
+
+<p align="left>Como rodar no CI/CD</p>
+<pre>cypress run</pre>
+<pre>cypress run [--record][--key dashboard-key]
+          
+<p align="left>Environments:</p>
+          
+<ul>
+  <li>CYPRESS_BASE_URL</li>
+  <li>CYPRESS_VIDEO_COMPRESSION</li>
+  <li>CYPRSS_REPORTER</li>
+  <li>CYPRESS_INSTALL_BINARY</li>
+  <li>CYPRESS_RECORD_KEY</li>
+</ul>
+
+<pre>
+# cypress/Dockerfile
+
+# Imagem base
+FROM cypress/base:14.0.0
+
+# Copia os arquivos para a imagem
+COPY ./
+
+# Opcional - Pega o binário local
+#ENV CYPRESS_INSTALL_BINARY=/cypress.zip
+
+RUN npm install --verbose
+RUN $(npm bin)/cypress verify
+
+# Inicialização do container
+CMD $(npm bin)/cypress run
+</pre>
+
+<pre>
+# prompt / terminal
+
+docker build -t cypress:0.0.1
+docker run cypress:0.0.1
+</pre>
