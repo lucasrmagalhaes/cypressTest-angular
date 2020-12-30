@@ -538,18 +538,20 @@ Cypress.Commands.add('loadUsers', () => {
 
 <p align="left>Verifique se os as apis e serviços estão rodando:</p>
           
-<p align="left">
-it('Backend Health Checks', () => {<br><br>
-&nbsp;&nbsp;cy.request('https://login/healthcheck').then((response) => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;expect(response.status).to.eq(200)<br>
-&nbsp;&nbsp;})<br>
-<br>  
-&nbsp;&nbsp;cy.request('https://database/healtcheck')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;.then((response) => {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;expect(response.status).to.eq(200)<br>
-&nbsp;&nbsp;})<br>
-<br>  
+<pre>
+it('Backend Health Checks', () => {
+  
+  cy.request('https://login/healthcheck').then((response) => {
+    expect(response.status).to.eq(200)
+  })
+  
+  cy.request('https://database/healtcheck')
+    .then((response) => {
+    expect(response.status).to.eq(200)
+  })  
+
 })
+</pre>
 
 <hr>
 
