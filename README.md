@@ -629,6 +629,6 @@ npm dev
 npm run cypress:open
 </pre>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="devhints.io/mocha">Cheatsheet Mocha</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="devhints.io/chai">Cheatsheet Chai</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://devhints.io/mocha">Cheatsheet Mocha</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://devhints.io/chai">Cheatsheet Chai</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cheatography.com/aiqbal/cheat-sheets/cypress-io/">Cheatsheet Cypress</a>
