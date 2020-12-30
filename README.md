@@ -152,12 +152,16 @@ http://localhost:4200/</pre><br>
 
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integrations/exemplo.spec.js
-  <pre>describe('Primeiro Teste', () => {
+
+```js
+describe('Primeiro Teste', () => {
   it('Exemplos Cypress', () => {
     cy.visit('https://example.cypress.io')
     expect(true).to.equal(true)
   })
-})</pre>
+})
+```
+
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;describe and it come from Mocha<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expect comes from Chai
 </p>
@@ -220,7 +224,7 @@ http://localhost:4200/</pre><br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://chrome.google.com/webstore/detail/cypress-recorder/glcapdcacdfkokcmicllhcjigeodacab">Extensão</a> para o Chrome capaz de gravar um roteiro base.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recomendado para capturar os seletores no DOM.
 
-<pre>
+```js
 describe('Conduit Cadastro', () => {
     const usuario = 'usuario' + (new Date()).getTime()
     const senha = 'senha' + (new Date()).getTime()
@@ -235,7 +239,7 @@ describe('Conduit Cadastro', () => {
             .should('be.visible')
     })
 })
-</pre>
+```
   
   <pre>npx cypress run --spec "cypress/integration/register.spec.js"</pre>
 </p>
@@ -246,7 +250,8 @@ describe('Conduit Cadastro', () => {
 
 <p align="left">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/support/index.js
-<pre>
+
+```js
 Cypress.Commands.add('login', (username, password) => {
   cy.visit('/login')
   cy.url().should('include', '/login')
@@ -254,7 +259,7 @@ Cypress.Commands.add('login', (username, password) => {
   cy.get('[formcontrolname=password]').type(password)
   cy.get('.btn').click()
 })
-</pre>
+```
 
 <hr>
 
@@ -264,7 +269,7 @@ Cypress.Commands.add('login', (username, password) => {
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/login.spec.js
 </p>
 
-<pre>
+```js
 describe('Conduit Login', () => {
     it('Login sucesso', () => {
         cy.login('testecypress@testecypress.com', 'testecypress')
@@ -279,7 +284,7 @@ describe('Conduit Login', () => {
             .should('contain', 'email or password is invalid')
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -287,7 +292,7 @@ describe('Conduit Login', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/perfil.spec.js</p>
 
-<pre>
+```js
 describe('Profile', () => {
     it('Editar Perfil', () => {
         cy.login('testecypress@testecypress.com', 'testecypress')
@@ -300,7 +305,7 @@ describe('Profile', () => {
         cy.contains('Update Settings').click()
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -308,7 +313,7 @@ describe('Profile', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/feed.spec.js</p>
 
-<pre>
+```js
 describe('Conduit Feed', () => {
 
     it('Ver Feeds', () => {
@@ -319,7 +324,7 @@ describe('Conduit Feed', () => {
     })
     
 })
-</pre>
+```
 
 <hr>
 
@@ -327,7 +332,7 @@ describe('Conduit Feed', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/pagination.spec.js</p>
 
-<pre>
+```js
 describe('Paginação', () => {
     it('Paginar', () => {
         cy.visit('/')
@@ -338,7 +343,7 @@ describe('Paginação', () => {
         cy.get('.page-item.active > a').contains('3')
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -346,7 +351,7 @@ describe('Paginação', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/post.spec.js</p>
 
-<pre>
+```js
 describe('Post', () => {
 
     beforeEach(() => {
@@ -376,7 +381,7 @@ describe('Post', () => {
     })
 
 })
-</pre>
+```
 
 <hr>
 
@@ -384,7 +389,7 @@ describe('Post', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/tags.spec.js</p>
 
-<pre>
+```js
 describe('Tags', () => {
     it('Adicionar', () => {
         cy.login('testecypress@testecypress.com', 'testecypress')
@@ -398,7 +403,7 @@ describe('Tags', () => {
         cy.get('.tag-list').contains('dragons');
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -406,7 +411,7 @@ describe('Tags', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/comentarios.spec.js</p>
 
-<pre>
+```js
 describe('Comentarios', () => {
     it('Escrever', () => {
         cy.login('testecypress@testecypress.com', 'testecypress')
@@ -417,7 +422,7 @@ describe('Comentarios', () => {
         cy.contains('Sensacional!')
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -425,7 +430,7 @@ describe('Comentarios', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/seguir.spec.js</p>
 
-<pre>
+```js
 describe('Seguir', () => {
     it('Seguir Usuário', () => {
         const usuario = 'usuario'+(new Date()).getTime();
@@ -440,7 +445,7 @@ describe('Seguir', () => {
         cy.contains('Folow').click()
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -448,7 +453,7 @@ describe('Seguir', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/logout.spec.js</p>
 
-<pre>
+```js
 describe('Logout', () => {
     it('Logout via Perfil', () => {
         cy.login('testecypress@testecypress.com', 'testecypress')
@@ -457,7 +462,7 @@ describe('Logout', () => {
         cy.get('.btn-outline-danger').click()
     })
 })
-</pre>
+```
 
 <hr>
 
@@ -465,25 +470,25 @@ describe('Logout', () => {
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/support/index.js</p>
 
-<pre>
+```js
 Cypress.Commands.add('loadUsers', () => {
   cy.fixture('users')
     .as('users')
 })
-</pre>
+```
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/integration/test.spec.js</p>
 
-<pre>
+```js
 // this.users.default.username
 // this.users.default.pass
 // this.users.client.username
 // this.users.client.pass
-</pre>
+```
 
 <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cypress/fixtures/users.json</p>
 
-<pre>
+```js
 {
   "default":{
     "user": "basic-user",
@@ -494,7 +499,7 @@ Cypress.Commands.add('loadUsers', () => {
     "pass": "testpass"
   }
 }
-</pre>
+```
 
 <hr>
 
@@ -536,9 +541,9 @@ Cypress.Commands.add('loadUsers', () => {
 
 <h3 align="center">Como identificar?</h3>
 
-<p align="left>Verifique se os as apis e serviços estão rodando:</p>
+<p align="left">Verifique se os as apis e serviços estão rodando:</p>
           
-```
+```js
 it('Backend Health Checks', () => {
   
   cy.request('https://login/healthcheck').then((response) => {
