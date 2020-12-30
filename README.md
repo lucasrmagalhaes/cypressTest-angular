@@ -594,3 +594,41 @@ CMD $(npm bin)/cypress run
 docker build -t cypress:0.0.1
 docker run cypress:0.0.1
 </pre>
+
+<hr>
+
+<h3 align="center">Paralelismo</h3>
+<pre>cypress run --parallel --record</pre>
+
+<h3 align="center">Cypress Dashboard</h3>
+<pre>cypress run --record --key=abc123</pre>
+
+<h3 align="center">+ exemplos</h3>
+
+<p align="left>1 - Cypress Kitchen Sink</p>
+          
+<pre>
+git clone
+https://github.com/cypress-io/cypress-example-kitchensink.git
+
+cd cypress-example-kitchensink
+npm install
+npm start
+npm run cy:open
+</pre>
+
+<p align="left>2 - Cypress Real Word App</p>
+          
+<pre>
+git clone
+https://github.com/cypress-io/cypress-realworld-app.git
+
+cd cypress-realworld-app
+npm install
+npm dev
+npm run cypress:open
+</pre>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="devhints.io/mocha">Cheatsheet Mocha</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="devhints.io/chai">Cheatsheet Chai</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://cheatography.com/aiqbal/cheat-sheets/cypress-io/">Cheatsheet Cypress</a>
