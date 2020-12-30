@@ -617,7 +617,7 @@ npm start
 npm run cy:open
 </pre>
 
-<p align="left>2 - Cypress Real Word App</p>
+<p align="left">2 - Cypress Real Word App</p>
           
 <pre>
 git clone
